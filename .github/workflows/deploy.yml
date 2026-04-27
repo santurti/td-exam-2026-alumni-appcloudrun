@@ -35,12 +35,13 @@ jobs:
       env:
         SERVICE_NAME: python-appcloudrun
         REGION: us-central1
+        
       run: |
         gcloud run deploy $SERVICE_NAME \
-            --image=<placeholder> \
-            --region=<placeholder> \
+            --image=${{ env.IMAGE_NAME }} \
+            --region=$REGION \
             --platform=managed \
             --allow-unauthenticated \
-            --port=<placeholder> \
-            --set-env-vars VERSION=<placeholder> \
-            --memory <placeholder>
+            --port=8080 \
+            --set-env-vars VERSION=2.0 \
+            --memory 256 MiB
