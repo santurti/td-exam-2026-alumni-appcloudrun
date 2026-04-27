@@ -43,5 +43,5 @@ jobs:
             --platform=managed \
             --allow-unauthenticated \
             --port=8080 \
-            --set-env-vars=2.0 \
+            --set-env-vars-VERSION=2.0 \
             --memory 256 MiB
